@@ -9,8 +9,7 @@ const container = document.querySelector(".container");
 
 export const playComputer = () => {
   const board = createBoard();
-  const { index, score } = minimax(board, 8, -Infinity, Infinity, true);
-  console.log({ index, score });
+  const { index } = minimax(board, 8, -Infinity, Infinity, true);
   const box = container.querySelectorAll(".box")[index];
   const isOccupied =
     box.querySelector(".circle") || box.querySelector(".cross-stripe");
@@ -21,7 +20,10 @@ export const playComputer = () => {
   reference.isCircle = !reference.isCircle;
 
   if (winner === 0) return;
-  if (winner === 1) showDrawPopUp();
+  if (winner === 1) {
+    container.removeEventListener("click", play);
+    return showDrawPopUp();
+  }
   if (winner === -1) {
     container.removeEventListener("click", play);
     return showWinPopUp();

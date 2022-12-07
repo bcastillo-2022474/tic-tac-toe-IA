@@ -2,25 +2,68 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<!-- 	meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"
+	      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 	<link rel="stylesheet" href="style.css">
 	<script type="module" defer src="js/main.js"></script>
+
 	<title>Title</title>
 </head>
 <body>
 	<div class="choice">
-		<button class="choice__cross focus">X</button>
-		<button class="choice__circle">O</button>
+		<button class="choice__cross focus">Joao</button>
+		<button class="choice__circle">Robot</button>
 	</div>
-	<div class="container">
-		<div class="box box-1" data-index="0"></div>
-		<div class="box box-2" data-index="1"></div>
-		<div class="box box-3" data-index="2"></div>
-		<div class="box box-4" data-index="3"></div>
-		<div class="box box-5" data-index="4"></div>
-		<div class="box box-6" data-index="5"></div>
-		<div class="box box-7" data-index="6"></div>
-		<div class="box box-8" data-index="7"></div>
-		<div class="box box-9" data-index="8"></div>
+	<div class="main">
+		<aside class="player player-1">
+			<div class="name-player">Joao</div>
+			<div class="figures">
+				<div class="character">
+					<i class="las la-dragon figure player-1__figure"></i>
+				</div>
+				<div class="mark">
+					<i class="las la-fire figure player-1__figure"></i>
+				</div>
+			</div>
+		</aside>
+		<div class="container">
+			<div class="box box-1" data-index="0"></div>
+			<div class="box box-2" data-index="1"></div>
+			<div class="box box-3" data-index="2"></div>
+			<div class="box box-4" data-index="3"></div>
+			<div class="box box-5" data-index="4"></div>
+			<div class="box box-6" data-index="5"></div>
+			<div class="box box-7" data-index="6"></div>
+			<div class="box box-8" data-index="7"></div>
+			<div class="box box-9" data-index="8"></div>
+		</div>
+		<aside class="player player-2">
+			<div class="name-player">Robot</div>
+			<div class="figures">
+				<div class="character">
+					<i class="las la-dragon figure player-2__figure"></i>
+				</div>
+				<div class="mark">
+					<i class="las la-fire figure player-2__figure"></i>
+				</div>
+			</div>
+		</aside>
 	</div>
+	<!-- 	<i class="las la-dragon"></i>
+		<i class="lab la-wolf-pack-battalion"></i>
+		<i class="lab la-github-alt"></i>
+		<i class="las la-skull-crossbones"></i>
+
+		<i class="las la-paw"></i>
+		<i class="las la-radiation-alt"></i>
+		<i class="las la-thumbtack"></i>
+		<i class="las la-fire"></i> -->
+	<div class="options">
+		<div class="reset">Restart Game</div>
+		<div class="new-game">New Game</div>
+	</div>
+
 </body>
 </html>

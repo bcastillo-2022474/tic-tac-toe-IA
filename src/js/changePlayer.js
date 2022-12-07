@@ -3,7 +3,7 @@ import { playComputer } from "./playComputer.js";
 
 const choiceContainer = document.querySelector(".choice");
 
-const focusPlayer = () => {
+export const focusPlayer = () => {
   if (reference.playing) return;
   const cross = document.querySelector(".choice__cross");
   const circle = document.querySelector(".choice__circle");
@@ -16,8 +16,7 @@ export const changePlayer = (e) => {
   if (!e.target.closest(".choice__circle")) return;
   focusPlayer();
   reference.playing = true;
-  // may change
-  // reference.isCircle = !reference.isCircle;
+  reference.isCircle = !reference.isCircle;
   playComputer();
   choiceContainer.removeEventListener("click", changePlayer);
 };
