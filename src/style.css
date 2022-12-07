@@ -132,7 +132,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  /*width: 100%;*/
+  padding: 1rem;
 
   border: white 1px solid;
   text-align: center;
